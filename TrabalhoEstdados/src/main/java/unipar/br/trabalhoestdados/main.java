@@ -45,21 +45,25 @@ public class main {
             
         } 
         JOptionPane.showMessageDialog(null, message);
+       }else if (fr == 2){
+           for(int i = 0; i < vetor.length; i++){
+            int chave, j;
+               chave = vetor[i];
+            
+            for(j = i - 1;  j >= 0 && vetor[j] > chave ; j-- ){
+                
+                vetor[j+1] = vetor[j];
+                
+            }
+            vetor[j+1] = chave;
+            
+            String message = "Os numeros informados sao \n";
+        for(i = 0; i < vetor.length; i++){
+            message += vetor[i];
+        }
+        JOptionPane.showMessageDialog(null, message + "\n");
        }
-       
-       
-       
-       
-       
+       }
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
 }
